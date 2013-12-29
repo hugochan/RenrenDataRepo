@@ -1,0 +1,5 @@
+/config/
+*.htm[l]
+*.bak
+*.py[co]
+*.sublime*
