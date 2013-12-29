@@ -7,7 +7,9 @@ from RenrenHandler import RenrenHandler
 class dataMiningHandler(object):
 	"""recommand public pages according to friens' preference"""
 	def dataProcess(self, handler, data, k=1):
+		# pdb.set_trace()
 		optimalDict = {}
+		optimalList = []
 		totalFriendsNum = len(data)
 		if totalFriendsNum > 0:
 			for eachkey in data.keys():
@@ -18,6 +20,7 @@ class dataMiningHandler(object):
 					else:
 						optimalDict[eachvalue] += 1
 				# print eachkey
+			# pdb.set_trace()
 			optimalList = sorted(optimalDict.items(), key=lambda optimalDict:optimalDict[1], reverse=True)
 			return optimalList
 		else:

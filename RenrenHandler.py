@@ -5,7 +5,7 @@ import urllib
 from httplib2 import Http
 import re, chardet, json
 import os, sys, time
-import pdb
+# import pdb
 
 
 class RenrenHandler(object):
