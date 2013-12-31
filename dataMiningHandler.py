@@ -20,7 +20,6 @@ class dataMiningHandler(object):
 					else:
 						optimalDict[eachvalue] += 1
 				# print eachkey
-			# pdb.set_trace()
 			optimalList = sorted(optimalDict.items(), key=lambda optimalDict:optimalDict[1], reverse=True)
 			return optimalList
 		else:

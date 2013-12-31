@@ -107,7 +107,9 @@ class RenrenHandler(object):
             f = open("config/"+self.userId+"/"+uid+"/friendsDict.dat", 'w')
             # print "your friendsDict does not exist in disk, trying to get from Internet..."
             friendsDict = self.__getFriends(uid)
-            f.write(json.dumps(friendsDict, ensure_ascii=False))
+            friendsDict_json = json.dumps(friendsDict, ensure_ascii=False)
+            f.write(friendsDict_json)
+            friendsDict = json.loads(friendsDict_json)#得到utf-8编码的friendsDict
         f.close()
         # print friendsDict
         return friendsDict
@@ -156,7 +158,9 @@ class RenrenHandler(object):
             f = open("config/"+self.userId+"/"+uid+"/publicPagesDict.dat", 'w')
             # print "your publicPagesDict does not exist in disk, trying to get from Internet..."
             publicPagesDict = self.__getPublicPages(uid)
-            f.write(json.dumps(publicPagesDict, ensure_ascii=False))#加ensure_ascii=False后可以正确dumps
+            publicPagesDict_json = json.dumps(publicPagesDict, ensure_ascii=False)
+            f.write(publicPagesDict_json)#加ensure_ascii=False后可以正确dumps
+            # publicPagesDict = json.loads(publicPagesDict_json)
         f.close()
         # print publicPagesDict
         return publicPagesDict

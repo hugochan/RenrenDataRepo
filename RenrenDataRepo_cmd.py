@@ -5,7 +5,7 @@ from RenrenHandler import RenrenHandler
 from dataMiningHandler import dataMiningHandler
 from dataVisualizationHandler import dataVisualizationHandler
 import sys, os, time, chardet
-# import pdb
+import pdb
 
 if __name__ == '__main__':
 	print "***********************************************"
@@ -94,10 +94,11 @@ if __name__ == '__main__':
 						totalFriendsNum = len(myFriendsDict)
 						if k > len(optimalList):
 							k = len(optimalList)
+						# pdb.set_trace()
 						codeType = chardet.detect(optimalList[0][0])["encoding"]
 						print "console<<<top %s recommended public pages according to your friends:"%k
 						for i in range(k):
-							print optimalList[i][0].decode(codeType).encode("gb2312") + "    you have " + "%.2f" %((float(optimalList[i][1])/float(totalFriendsNum))*100) + "% " + "friends notice the public page"
+							print optimalList[i][0] + "    you have " + "%.2f" %((float(optimalList[i][1])/float(totalFriendsNum))*100) + "% " + "friends notice the public page"
 					else:
 						print "console<<<you have no friends now, so we have no ability to recommand any public pages..."
 				else:

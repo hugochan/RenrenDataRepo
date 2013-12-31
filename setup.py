@@ -4,4 +4,4 @@
 from distutils.core import setup
 import py2exe
 
-setup(version = "1.0", name = "RenrenDataRepo", console = ['D:\Learning_Library\Python\RenrenDataRepo\setup.py'])
+setup(version = "1.0", name = "RenrenDataRepo", console = ['D:\Learning_Library\Python\RenrenDataRepo\RenrenDataRepo_cmd.py'])
