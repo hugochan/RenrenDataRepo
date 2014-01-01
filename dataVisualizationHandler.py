@@ -3,6 +3,7 @@
 
 from RenrenHandler import RenrenHandler
 import networkx as nx
+import matplotlib.pyplot as plt
 import random
 import os, time, sys
 # import pdb
@@ -72,12 +73,12 @@ class dataVisualizationHandler(object):
         return [self.one_node_color(n) for n in nodes]
 
     def save(self, it=55):
+        # pdb.set_trace()
         if not os.path.exists("config/" + self.handler.userId + "/data/"):
                 os.makedirs("config/" + self.handler.userId + "/data/")
 
         fd = "config/" + self.handler.userId + "/data/friendsRelation.dot"
         fp = "config/" + self.handler.userId + "/data/friendsRelation.png"
-        # pdb.set_trace()
         try:
             nx.write_dot(self.G, fd)
         except Exception, e:
@@ -85,7 +86,6 @@ class dataVisualizationHandler(object):
             time.sleep(5)
             sys.exit()
 
-        import matplotlib.pyplot as plt
         
         pos = nx.spring_layout(self.G, iterations=it)
         

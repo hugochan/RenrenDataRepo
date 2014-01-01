@@ -5,7 +5,7 @@ from RenrenHandler import RenrenHandler
 from dataMiningHandler import dataMiningHandler
 from dataVisualizationHandler import dataVisualizationHandler
 import sys, os, time, chardet
-import pdb
+# import pdb
 
 if __name__ == '__main__':
 	print "***********************************************"
@@ -14,6 +14,7 @@ if __name__ == '__main__':
 	print "console<<<all user datas are saved under config folder..."
 	print "console<<<you need to guarantee you have access to the Internet..."
 	print "\n"
+
 
 	option = None
 	NewDatasFlag = True
