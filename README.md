@@ -36,10 +36,10 @@ and networkx is a third part package used for drawing graphs.
 <a name="presentation" class="anchor" href="#presentation"><span class="octicon octicon-link"></span></a>3 presentation</h2>
 <h3>
 	<p>console</p></h3>
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="./image/console.png" height="500" width="500" alt="console"></img>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="./image/console_picture.png" height="500" width="500" alt="console"></img>
 <br><br><br><br>
 
 <h3>
 	<p>relationship-graph</p></h3>
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="./image/relationship-graph.png" height="500" width="500" alt="relationship-graph"></img>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="./image/RelationshipGraph.png" height="500" width="500" alt="relationship-graph"></img>
 <br><br><br><br>
